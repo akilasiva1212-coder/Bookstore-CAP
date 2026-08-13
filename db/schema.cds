@@ -17,12 +17,14 @@ entity Books  : cuid, managed {
 entity Authors : cuid,managed
 {
     name : String;
-    books : Association to many Books on books.Author = $self
+    books : Association to many Books on books.Author = $self;
 }
 entity Chapters : cuid,managed
 {
+    key book : Association to Books;
     number : Integer;
-key book : Association to Books;    
+    title : String;
+    pages : Integer;    
 }
 
     

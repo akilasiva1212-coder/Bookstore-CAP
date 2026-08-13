@@ -1,7 +1,7 @@
 {
   "_version": "1.86.0",
   "sap.app": {
-    "id": "bookstorelistview",
+    "id": "project1",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.30.0",
-      "toolsId": "db00a1b5-250f-4af1-9441-53c6a1ee13b9"
+      "toolsId": "89532dbf-fc95-42ff-afd3-d6014c7233dc"
     },
     "dataSources": {
       "mainService": {
@@ -60,7 +60,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "bookstorelistview.i18n.i18n"
+          "bundleName": "project1.i18n.i18n"
         }
       },
       "": {
@@ -92,6 +92,11 @@
           "pattern": "Books({key}):?query:",
           "name": "BooksObjectPage",
           "target": "BooksObjectPage"
+        },
+        {
+          "pattern": "Books({key})/Chapters({key2}):?query:",
+          "name": "ChaptersObjectPage",
+          "target": "ChaptersObjectPage"
         }
       ],
       "targets": {
@@ -116,8 +121,7 @@
                     "type": "ResponsiveTable"
                   }
                 }
-              },
-              "initialLoad": "Disabled"
+              }
             }
           }
         },
@@ -129,14 +133,24 @@
             "settings": {
               "editableHeaderContent": false,
               "contextPath": "/Books",
-              "sectionLayout": "Page",
-              "controlConfiguration": {
-                "Chapters/@com.sap.vocabularies.UI.v1.LineItem#Chapters": {
-                  "tableSettings": {
-                    "type": "ResponsiveTable"
+              "navigation": {
+                "Chapters": {
+                  "detail": {
+                    "route": "ChaptersObjectPage"
                   }
                 }
               }
+            }
+          }
+        },
+        "ChaptersObjectPage": {
+          "type": "Component",
+          "id": "ChaptersObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/Books/Chapters"
             }
           }
         }
