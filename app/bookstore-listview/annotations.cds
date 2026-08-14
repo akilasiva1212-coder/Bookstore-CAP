@@ -28,6 +28,12 @@ annotate service.Books with @(
                 Label : 'Price',
                 Value : price,
             },
+            {
+                $Type : 'UI.DataField',
+                Value : status_code,
+                Criticality : status.criticality,
+                CriticalityRepresentation : #WithIcon,
+            },
         ],
     },
     UI.Facets : [
@@ -76,9 +82,21 @@ annotate service.Books with @(
             Label : 'Price',
             Value : price,
         },
+        {
+            $Type : 'UI.DataField',
+            Value : stock,
+            Label : 'Stock',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : status_code,
+            Label : 'Status',
+            Criticality : status.criticality,
+        },
     ],
     UI.SelectionFields : [
         Genre,
+        status_code,
     ],
     UI.HeaderInfo : {
         TypeName : 'Book',
@@ -175,4 +193,30 @@ annotate service.Chapters with @(
         },
     ]
 );
+
+annotate service.Books with {
+    status @(
+        Common.Text : status.displayText,
+        Common.Label : 'Status',
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'BookStatus',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : status_code,
+                    ValueListProperty : 'code',
+                },
+            ],
+        },
+        Common.ValueListWithFixedValues : true,
+        Common.Text.@UI.TextArrangement : #TextOnly,
+    )
+};
+
+annotate service.BookStatus with {
+    code @(
+        Common.Text : displayText,
+        Common.Text.@UI.TextArrangement : #TextOnly,
+)};
 

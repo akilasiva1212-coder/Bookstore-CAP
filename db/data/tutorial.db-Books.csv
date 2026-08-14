@@ -1,6 +1,6 @@
-ID,Title,Author_ID,Genre,PublishedAt,Pages,price,createdAt,createdBy,modifiedAt,modifiedBy
-6017209b-68b7-4f27-8202-12994b66d4fe,Title-6017209,392539eb-fad4-43af-952f-2e7c75317263,Genre-6017209,2000-07-20,44,9141336.51,2020-07-08T00:00:00.000Z,createdBy.3kywp@example.net,2013-12-05T00:00:00.000Z,modifiedBy.3kywp@example.net
-60172105-8603-4a70-a896-f977f238160a,Title-6017210,392539eb-fad4-43af-952f-2e7c75317263,Genre-6017210,2001-11-24,62,1324143.95,2003-09-25T00:00:00.000Z,createdBy.3kywq@example.org,2013-10-05T00:00:00.000Z,modifiedBy.3kywq@example.org
-60172115-18b7-4a1d-9679-e874865e786b,Title-6017211,392539eb-fad4-43af-952f-2e7c75317263,Genre-6017211,2010-05-30,13,4290464,2006-12-10T00:00:00.000Z,createdBy.3kywr@example.net,2003-02-25T00:00:00.000Z,modifiedBy.3kywr@example.org
-6017212f-05f8-4cd6-9619-562c842e8817,Title-6017212,392539eb-fad4-43af-952f-2e7c75317263,Genre-6017212,2015-09-02,22,8384502.49,2002-01-17T00:00:00.000Z,createdBy.3kyws@example.net,2022-05-06T00:00:00.000Z,modifiedBy.3kyws@example.com
-6017213b-b933-483b-a12b-6417c4e26495,Title-6017213,392539eb-fad4-43af-952f-2e7c75317263,Genre-6017213,2023-10-27,29,853288.5,2011-04-20T00:00:00.000Z,createdBy.3kywt@example.com,2004-04-02T00:00:00.000Z,modifiedBy.3kywt@example.com
+ID,Title,Author_ID,Genre,PublishedAt,Pages,price,stock,status_code,createdAt,createdBy,modifiedAt,modifiedBy
+47260238-19c4-41f2-9fc5-ea8870c5b645,Title-4726023,20705818-18aa-4761-a2dc-7e9d2dca95a3,Genre-4726023,2015-02-06,32,4477737.35,80,L,2018-09-05T00:00:00.000Z,createdBy.2tamf@example.net,2017-02-16T00:00:00.000Z,modifiedBy.2tamf@example.org
+47260242-d8a6-48f7-809c-6ae9273ba2b8,Title-4726024,20705818-18aa-4761-a2dc-7e9d2dca95a3,Genre-4726024,2015-12-18,92,9191343.62,23,L,2023-02-17T00:00:00.000Z,createdBy.2tamg@example.net,2022-09-16T00:00:00.000Z,modifiedBy.2tamg@example.org
+4726025b-d3cd-4ab0-992d-927885f78976,Title-4726025,20705818-18aa-4761-a2dc-7e9d2dca95a3,Genre-4726025,2001-07-08,92,9283824.57,94,A,2013-02-17T00:00:00.000Z,createdBy.2tamh@example.net,2013-06-24T00:00:00.000Z,modifiedBy.2tamh@example.org
+4726026b-4312-4c3f-bf2f-9573775c79c2,Title-4726026,20705818-18aa-4761-a2dc-7e9d2dca95a3,Genre-4726026,2004-12-31,67,998476,78,L,2014-09-05T00:00:00.000Z,createdBy.2tami@example.org,2002-05-26T00:00:00.000Z,modifiedBy.2tami@example.net
+4726027f-43ab-42d9-b81c-a1dad2b6f759,Title-4726027,20705818-18aa-4761-a2dc-7e9d2dca95a3,Genre-4726027,2023-07-03,54,1045931.82,0,U,2007-01-22T00:00:00.000Z,createdBy.2tamj@example.net,2000-01-30T00:00:00.000Z,modifiedBy.2tamj@example.com
