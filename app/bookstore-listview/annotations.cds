@@ -34,20 +34,24 @@ annotate service.Books with @(
                 Criticality : status.criticality,
                 CriticalityRepresentation : #WithIcon,
             },
+            {
+                $Type : 'UI.DataField',
+                Value : currency_code,
+            },
         ],
     },
     UI.Facets : [
         {
             $Type : 'UI.ReferenceFacet',
-            ID : 'GeneratedFacet1',
-            Label : 'General Information',
-            Target : '@UI.FieldGroup#GeneratedGroup',
-        },
-        {
-            $Type : 'UI.ReferenceFacet',
             Label : 'Entry Information',
             ID : 'EntryInformation',
             Target : '@UI.FieldGroup#EntryInformation',
+        },
+        {
+            $Type : 'UI.ReferenceFacet',
+            ID : 'GeneratedFacet1',
+            Label : 'General Information',
+            Target : '@UI.FieldGroup#GeneratedGroup',
         },
         {
             $Type : 'UI.ReferenceFacet',
@@ -95,8 +99,9 @@ annotate service.Books with @(
         },
     ],
     UI.SelectionFields : [
-        Genre,
         status_code,
+        Genre,
+        currency_code,
     ],
     UI.HeaderInfo : {
         TypeName : 'Book',
@@ -219,4 +224,11 @@ annotate service.BookStatus with {
         Common.Text : displayText,
         Common.Text.@UI.TextArrangement : #TextOnly,
 )};
+
+annotate service.Books with {
+    currency @(
+        Common.Label : 'Currency',
+        Common.ValueListWithFixedValues : true,
+    )
+};
 
